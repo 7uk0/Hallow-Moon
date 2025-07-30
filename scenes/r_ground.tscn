@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0s485mf3i22m"]
+
+[ext_resource type="Texture2D" uid="uid://t071f13r1pfe" path="res://assets/sSquib.png" id="1_70hoj"]
+[ext_resource type="Script" uid="uid://driwgwnebr7le" path="res://scripts/o_squib.gd" id="1_vs3mr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs3mr"]
+atlas = ExtResource("1_70hoj")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qns3m"]
+atlas = ExtResource("1_70hoj")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jemyx"]
+atlas = ExtResource("1_70hoj")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y40fu"]
+atlas = ExtResource("1_70hoj")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70b31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs3mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qns3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jemyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y40fu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="rGround" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="oSquib" type="Node2D" parent="Node"]
+script = ExtResource("1_vs3mr")
+
+[node name="spSquib" type="AnimatedSprite2D" parent="Node/oSquib"]
+position = Vector2(1294, 642)
+sprite_frames = SubResource("SpriteFrames_70b31")
+
+[node name="oPlayerGround" type="Node2D" parent="Node"]
+
+[node name="spPlayerGround" type="AnimatedSprite2D" parent="Node/oPlayerGround"]
