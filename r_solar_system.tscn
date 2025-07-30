@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2t5vvtiqmefr"]
+
+[ext_resource type="Script" uid="uid://bmfaj1anxmcqi" path="res://scripts/o_bebop.gd" id="1_wckks"]
+[ext_resource type="Texture2D" uid="uid://b6y7agfretl08" path="res://assets/ship.png" id="2_08h7p"]
+
+[node name="rSolarSystem" type="Node2D"]
+
+[node name="SystemObjects" type="Node2D" parent="."]
+
+[node name="oBebop" type="Node2D" parent="."]
+script = ExtResource("1_wckks")
+
+[node name="spBebop" type="Sprite2D" parent="oBebop"]
+texture = ExtResource("2_08h7p")
