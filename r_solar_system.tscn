@@ -1,10 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2t5vvtiqmefr"]
+[gd_scene load_steps=4 format=3 uid="uid://c2t5vvtiqmefr"]
 
 [ext_resource type="Script" uid="uid://bmfaj1anxmcqi" path="res://scripts/o_bebop.gd" id="1_wckks"]
 [ext_resource type="Texture2D" uid="uid://b6y7agfretl08" path="res://assets/ship.png" id="2_08h7p"]
+[ext_resource type="Texture2D" uid="uid://dxli4mxokui6p" path="res://assets/sThoth.png" id="3_08h7p"]
 
 [node name="rSolarSystem" type="Node2D"]
 
 [node name="spBebop" type="Sprite2D" parent="."]
+position = Vector2(641, 282)
 texture = ExtResource("2_08h7p")
 script = ExtResource("1_wckks")
+
+[node name="System-Objects" type="Node2D" parent="."]
+position = Vector2(-1, -1)
+
+[node name="Thoth" type="Sprite2D" parent="System-Objects"]
+position = Vector2(1373, 702)
+scale = Vector2(0.614583, 0.614583)
+texture = ExtResource("3_08h7p")
+
+[node name="Gas-Giant" type="Sprite2D" parent="System-Objects"]
+
+[node name="X" type="Sprite2D" parent="System-Objects"]
+
+[node name="Y" type="Sprite2D" parent="System-Objects"]
+
+[node name="Star" type="Sprite2D" parent="System-Objects"]
+
+[node name="UI" type="CanvasLayer" parent="System-Objects"]
+
+[node name="Fuel" type="ProgressBar" parent="System-Objects/UI"]
+offset_left = 1679.0
+offset_top = 17.0
+offset_right = 1894.0
+offset_bottom = 44.0
+
+[node name="Star-date" type="Label" parent="System-Objects/UI"]
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.022
+anchor_right = 0.064
+anchor_bottom = 0.022
+offset_left = -353.88
+offset_top = 80.24
+offset_right = -313.88
+offset_bottom = 103.24
