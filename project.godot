@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="HallowMoon"
+config/name="Preload"
 run/main_scene="res://r_solar_system.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -26,8 +26,3 @@ move_up={
 "deadzone": 0.2,
 "events": []
 }
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
