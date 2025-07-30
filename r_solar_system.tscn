@@ -5,10 +5,6 @@
 
 [node name="rSolarSystem" type="Node2D"]
 
-[node name="SystemObjects" type="Node2D" parent="."]
-
-[node name="oBebop" type="Node2D" parent="."]
-script = ExtResource("1_wckks")
-
-[node name="spBebop" type="Sprite2D" parent="oBebop"]
+[node name="spBebop" type="Sprite2D" parent="."]
 texture = ExtResource("2_08h7p")
+script = ExtResource("1_wckks")

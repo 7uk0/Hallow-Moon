@@ -1,13 +1,11 @@
 extends Node2D
-
 var spd = 30
-
 func _process(delta): 
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_key_pressed(KEY_W):
 		position.y -= spd * delta
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_key_pressed(KEY_S):
 		position.y += spd * delta
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_key_pressed(KEY_D):
 		position.x += spd * delta
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_key_pressed(KEY_A):
 		position.x -= spd * delta
