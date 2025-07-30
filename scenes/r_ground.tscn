@@ -1,39 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0s485mf3i22m"]
+[gd_scene load_steps=9 format=3 uid="uid://c0s485mf3i22m"]
 
-[ext_resource type="Script" uid="uid://dtpw302ixhsfc" path="res://scenes/o_player_ground.gd" id="3_jemyx"]
+[ext_resource type="Script" uid="uid://dtpw302ixhsfc" path="res://scripts/objx/o_player_ground.gd" id="3_jemyx"]
+[ext_resource type="Script" uid="uid://cnhtfq3vt3qlo" path="res://scripts/scGroundSpawner.gd" id="3_qns3m"]
 [ext_resource type="Texture2D" uid="uid://cbyo7ebaaphi2" path="res://assets/sPlayerWalk.png" id="4_y40fu"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vs3mr"]
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qns3m"]
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jemyx"]
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y40fu"]
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_70b31"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vs3mr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qns3m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jemyx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y40fu")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70b31"]
 atlas = ExtResource("4_y40fu")
@@ -68,7 +37,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [node name="rGround" type="Node2D"]
@@ -77,13 +46,12 @@ animations = [{
 
 [node name="oSquib" type="Node2D" parent="Node"]
 
-[node name="spSquib" type="AnimatedSprite2D" parent="Node/oSquib"]
-position = Vector2(1294, 642)
-sprite_frames = SubResource("SpriteFrames_70b31")
-
 [node name="oPlayerGround" type="Node2D" parent="Node"]
 script = ExtResource("3_jemyx")
 
 [node name="spPlayerGround" type="AnimatedSprite2D" parent="Node/oPlayerGround"]
 position = Vector2(690, 400)
 sprite_frames = SubResource("SpriteFrames_nijli")
+
+[node name="Node" type="Node" parent="Node"]
+script = ExtResource("3_qns3m")
