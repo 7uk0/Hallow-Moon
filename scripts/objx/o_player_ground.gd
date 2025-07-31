@@ -1,9 +1,7 @@
 extends Node2D
 var spd = 60
-
 func _ready():
 	$spPlayerGround.play("default")
-
 func _process(delta): 
 	if Input.is_action_pressed("ui_up"):
 		position.y -= spd * delta
@@ -15,7 +13,6 @@ func _process(delta):
 		position.x -= spd * delta
 		
 	var input_vector = Vector2.ZERO
-		
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 		

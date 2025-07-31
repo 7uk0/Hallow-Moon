@@ -1,28 +1,35 @@
 extends Node2D
 
-var spd = 30 # speed
-var fuel = 100.0  # Max fuel
-var fuel_consumption_rate = 5.0  # Fuel per second while moving
+var fuel
+var fuel_bar
+var speed = 30
+const MAX_FUEL = 100
+const FUEL_CONSUMPTION_RATE = 10 
+@export var fuel_bar_path: NodePath
 
+func _ready():
+	fuel = MAX_FUEL
+	fuel_bar = get_node(fuel_bar_path)
+	
 func _process(delta): 
 	var moved = false
 
 	if Input.is_key_pressed(KEY_W):
-		position.y -= spd * delta
+		position.y -= speed * delta
 		moved = true
 	if Input.is_key_pressed(KEY_S):
-		position.y += spd * delta
+		position.y += speed * delta
 		moved = true
 	if Input.is_key_pressed(KEY_D):
-		position.x += spd * delta
+		position.x += speed * delta
 		moved = true
 	if Input.is_key_pressed(KEY_A):
-		position.x -= spd * delta
+		position.x -= speed * delta
 		moved = true
 
 	if moved and fuel > 0:
-		fuel -= fuel_consumption_rate * delta
+		fuel -= FUEL_CONSUMPTION_RATE * delta
 		fuel = max(fuel, 0)
 
-	if fuel <= 0:
-		spd = 0  
+	if fuel <= 0: speed = 0  
+	fuel_bar.value = fuel

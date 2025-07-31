@@ -38,7 +38,6 @@ color = Color(0.00262236, 0.187307, 0.21173, 1)
 position = Vector2(641, 282)
 texture = ExtResource("1_p4cpr")
 script = ExtResource("2_ouf4w")
-fuel_bar_path = NodePath("../UI/Fuel")
 
 [node name="SystemObjects" type="Node2D" parent="."]
 position = Vector2(-1, -1)
