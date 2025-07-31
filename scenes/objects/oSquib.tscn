@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqttnwadvc2c2"]
 
 [ext_resource type="Script" uid="uid://dh4bjjlj6kvau" path="res://scripts/Thoth-Life/o_squib.gd" id="1_j3wg4"]
-[ext_resource type="Texture2D" uid="uid://bxen8uwpw08r3" path="res://assets/sSquib.png" id="2_rxaow"]
+[ext_resource type="Texture2D" uid="uid://bxen8uwpw08r3" path="res://assets/Thoth-Surface/sSquib.png" id="2_rxaow"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xis5k"]
 atlas = ExtResource("2_rxaow")

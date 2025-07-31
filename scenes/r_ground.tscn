@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtpw302ixhsfc" path="res://scripts/objx/o_player_ground.gd" id="3_jemyx"]
 [ext_resource type="Script" uid="uid://cnhtfq3vt3qlo" path="res://scripts/scGroundSpawner.gd" id="3_qns3m"]
-[ext_resource type="Texture2D" uid="uid://cbyo7ebaaphi2" path="res://assets/sPlayerWalk.png" id="4_y40fu"]
+[ext_resource type="Texture2D" uid="uid://cbyo7ebaaphi2" path="res://assets/Thoth-Surface/sPlayerWalk.png" id="4_y40fu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70b31"]
 atlas = ExtResource("4_y40fu")

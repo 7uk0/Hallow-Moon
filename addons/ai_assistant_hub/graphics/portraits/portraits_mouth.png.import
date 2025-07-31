@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd4fwck8r3mv4"
-path="res://.godot/imported/Thoth.png-9fcdf760a05baa1973ae80a3bd660f98.ctex"
+uid="uid://bqkxfvi24xl6c"
+path="res://.godot/imported/portraits_mouth.png-ce83a7fccf995934a71e41916fa17ab7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Star-Map/Thoth.png"
-dest_files=["res://.godot/imported/Thoth.png-9fcdf760a05baa1973ae80a3bd660f98.ctex"]
+source_file="res://addons/ai_assistant_hub/graphics/portraits/portraits_mouth.png"
+dest_files=["res://.godot/imported/portraits_mouth.png-ce83a7fccf995934a71e41916fa17ab7.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
