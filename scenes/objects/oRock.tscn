@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://13r0ylceojg6"]
 
-[ext_resource type="Script" uid="uid://co7fi214ir2bp" path="res://scenes/objects/o_rock.gd" id="1_us0h7"]
+[ext_resource type="Script" uid="uid://co7fi214ir2bp" path="res://scripts/Thoth-Life/o_rock.gd" id="1_us0h7"]
 [ext_resource type="Texture2D" uid="uid://6qynv3nnbtjp" path="res://assets/Thoth-Surface/rocks.png" id="2_u2ld8"]
 
 [node name="ORock" type="Node2D"]

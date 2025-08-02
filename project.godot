@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hollow-Moon"
-run/main_scene="res://scenes/r_solar_system.tscn"
+run/main_scene="uid://cpyrr53mjemjf"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

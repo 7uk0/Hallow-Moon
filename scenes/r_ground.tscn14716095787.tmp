@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c0s485mf3i22m"]
 
-[ext_resource type="Script" uid="uid://dtpw302ixhsfc" path="res://scripts/Player/o_player_ground.gd" id="3_jemyx"]
+[ext_resource type="Script" uid="uid://dtpw302ixhsfc" path="res://scripts/objx/o_player_ground.gd" id="3_jemyx"]
 [ext_resource type="Script" uid="uid://cnhtfq3vt3qlo" path="res://scripts/scGroundSpawner.gd" id="3_qns3m"]
 [ext_resource type="Texture2D" uid="uid://cbyo7ebaaphi2" path="res://assets/Thoth-Surface/sPlayerWalk.png" id="4_y40fu"]
 
