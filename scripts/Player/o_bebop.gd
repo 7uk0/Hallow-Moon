@@ -1,18 +1,26 @@
 extends Node2D
 var fuel
-
 var fuel_perc
+var bebop_flame
 var acceleration = 5 
+var averageVelocity 
 var velocity_vector = Vector2.ZERO
 const MAX_FUEL = 100
 var rotationSpeed = 1
 var input_vector = Vector2.ZERO
 const FUEL_CONSUMPTION_RATE = 2 
 @export var fuel_percentage_path: NodePath 
+@export var velocity_path: NodePath 
+@export var bebop_flame_path: NodePath 
 func _ready():
 	fuel = MAX_FUEL
 	fuel_perc = get_node(fuel_percentage_path)
+	bebop_flame = get_node(bebop_flame_path)
 func _process(delta): 
+	
+	var underAcceleration = false
+	bebop_flame.visible = false
+	
 	if input_vector.x != 0 or input_vector.y != 0:
 			input_vector = input_vector.normalized()
 			
@@ -27,7 +35,7 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_Q):
 		rotation -= rotationSpeed * delta
 		
-	var underAcceleration = false
+	
 	if fuel > 0: 
 		if Input.is_key_pressed(KEY_W):
 			input_vector.y -= 1
@@ -46,5 +54,7 @@ func _process(delta):
 			velocity_vector.x -= acceleration * delta
 			underAcceleration = true
 		
-	if underAcceleration : velocity_vector += local_direction
+	if underAcceleration : 
+		velocity_vector += local_direction
+		bebop_flame.visible = true
 	position += velocity_vector * delta

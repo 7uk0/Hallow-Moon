@@ -1,9 +1,10 @@
-[gd_scene load_steps=316 format=3 uid="uid://cpyrr53mjemjf"]
+[gd_scene load_steps=317 format=3 uid="uid://cpyrr53mjemjf"]
 
 [ext_resource type="Texture2D" uid="uid://mjs0rjvs8r1y" path="res://assets/Star-Map/Space-Background.png" id="1_ouf4w"]
 [ext_resource type="Texture2D" uid="uid://b6y7agfretl08" path="res://assets/Star-Map/ship.png" id="1_p4cpr"]
 [ext_resource type="Script" uid="uid://bmfaj1anxmcqi" path="res://scripts/Player/o_bebop.gd" id="2_ouf4w"]
 [ext_resource type="Texture2D" uid="uid://dd4fwck8r3mv4" path="res://assets/Star-Map/Thoth.png" id="4_ouf4w"]
+[ext_resource type="Texture2D" uid="uid://cue4r0dlui6lg" path="res://assets/Star-Map/rocket.png" id="4_ykrcu"]
 [ext_resource type="Texture2D" uid="uid://s3bn8ydngdwa" path="res://assets/Star-Map/Gas-Giant.png" id="5_qx2pl"]
 [ext_resource type="Texture2D" uid="uid://bxnxm0brkbe3f" path="res://assets/Star-Map/Planet-x.png" id="6_ykrcu"]
 [ext_resource type="Texture2D" uid="uid://hqgsl417ac0j" path="res://assets/Star-Map/Water-world.png" id="7_3ukui"]
@@ -2187,18 +2188,6 @@ offset_right = 1638.12
 offset_bottom = 31.24
 text = "Fuel:"
 
-[node name="Speed" type="Label" parent="UI"]
-anchors_preset = -1
-anchor_left = 0.064
-anchor_top = 0.022
-anchor_right = 0.064
-anchor_bottom = 0.022
-offset_left = 1597.12
-offset_top = 39.24
-offset_right = 1667.12
-offset_bottom = 63.24
-text = "Velocity:"
-
 [node name="Galaxy" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(3.84, 3.6)
@@ -2211,6 +2200,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_p4cpr")
 script = ExtResource("2_ouf4w")
 fuel_percentage_path = NodePath("../UI/Fuel Percentage")
+bebop_flame_path = NodePath("Rocket")
+
+[node name="Rocket" type="Sprite2D" parent="spBebop"]
+position = Vector2(-1.99982, 47)
+scale = Vector2(0.23229, 0.23229)
+texture = ExtResource("4_ykrcu")
 
 [node name="SystemObjects" type="Node2D" parent="."]
 position = Vector2(-1, -1)
