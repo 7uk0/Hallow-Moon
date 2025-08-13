@@ -17,16 +17,9 @@ func _ready():
 	fuel_perc = get_node(fuel_percentage_path)
 	bebop_flame = get_node(bebop_flame_path)
 func _process(delta): 
-	
 	var underAcceleration = false
-	bebop_flame.visible = false
-	
 	if input_vector.x != 0 or input_vector.y != 0:
 			input_vector = input_vector.normalized()
-			
-			fuel -= FUEL_CONSUMPTION_RATE * delta
-			fuel = max(fuel, 0)
-			fuel_perc.text = str(int((fuel / MAX_FUEL) * 100)) + "%"
 		
 	var local_direction = input_vector.rotated(rotation)
 	#Movement Mechanics
@@ -53,8 +46,12 @@ func _process(delta):
 			input_vector.x -= 1
 			velocity_vector.x -= acceleration * delta
 			underAcceleration = true
-		
+	
 	if underAcceleration : 
 		velocity_vector += local_direction
-		bebop_flame.visible = true
+		fuel -= FUEL_CONSUMPTION_RATE * delta
+		
+	fuel = max(fuel, 0)
+	fuel_perc.text = str(int((fuel / MAX_FUEL) * 100)) + "%"
+	bebop_flame.visible = underAcceleration
 	position += velocity_vector * delta
